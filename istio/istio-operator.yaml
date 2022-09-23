@@ -21,6 +21,13 @@ spec:
     pilot:
       enabled: true
       k8s:
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "512Mi"
+          limits:
+            cpu: "500m"
+            memory: "1Gi"
         hpaSpec:
           minReplicas: 2
   meshConfig:
